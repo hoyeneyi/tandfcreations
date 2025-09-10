@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Home -->
+  <url>
+    <loc>https://tandfcreations.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Sections (anchor links won't be indexed, but it's good practice to list main sections) -->
+  <url>
+    <loc>https://tandfcreations.com/#work</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tandfcreations.com/#process</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tandfcreations.com/#testimonials</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tandfcreations.com/#contact</loc>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

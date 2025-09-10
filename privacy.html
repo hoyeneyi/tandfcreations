@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Timber & Forge Creations</title>
+  <meta name="description" content="Privacy policy for Timber & Forge Creations." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { navy:'#0E1B2A', wood:'#A36B39', sand:'#F6F0E8', steel:'#6B7280' } } } }
+  </script>
+</head>
+<body class="font-inter text-navy bg-sand">
+  <main class="mx-auto max-w-3xl px-6 py-14">
+    <h1 class="text-3xl font-extrabold">Privacy Policy</h1>
+    <p class="text-steel mt-2">Last updated: <span id="d"></span></p>
+
+    <section class="mt-8 space-y-5 text-[15px] leading-7 text-slate-700">
+      <p>We respect your privacy. This site collects only the information you voluntarily provide via our contact form.</p>
+
+      <h2 class="text-xl font-semibold">Information we collect</h2>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>Contact details (name, email, phone) when you submit the form.</li>
+        <li>Project details you share in the message box.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold mt-6">How we use information</h2>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>To respond to your inquiry and provide a quote.</li>
+        <li>To schedule delivery/installation if you become a customer.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold mt-6">Sharing</h2>
+      <p>We do not sell your personal data. We may use Formspree to process form submissions and standard analytics to understand site usage.</p>
+
+      <h2 class="text-xl font-semibold mt-6">Data retention</h2>
+      <p>We keep your messages only as long as necessary to serve your request and maintain records of completed projects.</p>
+
+      <h2 class="text-xl font-semibold mt-6">Your choices</h2>
+      <p>Contact us if you want your information updated or deleted: <a class="underline" href="https://instagram.com/timberandforgecreations" target="_blank" rel="noopener">Instagram DM</a>.</p>
+
+      <h2 class="text-xl font-semibold mt-6">Contact</h2>
+      <p>Timber & Forge Creations — Metro Detroit, MI.</p>
+    </section>
+
+    <div class="mt-10">
+      <a href="/" class="inline-flex justify-center rounded-md bg-navy px-5 py-3 text-white font-medium hover:bg-navy/90">Back to Home</a>
+    </div>
+  </main>
+
+  <script>document.getElementById('d').textContent = new Date().toLocaleDateString()</script>
+</body>
+</html>
