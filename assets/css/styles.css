@@ -1,0 +1,35 @@
+/* Smooth scroll for anchor links */
+html { scroll-behavior: smooth; }
+
+/* Sticky header shadow on scroll */
+header.stuck { box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+
+/* === Base helpers for form inputs & buttons === */
+.input {
+  padding: 0.75rem;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 0.5rem;
+  background: #fff;
+  font-size: 0.95rem;
+}
+
+.input:focus {
+  outline: 2px solid #A36B39; /* wood color */
+  outline-offset: 1px;
+}
+
+.btn-primary {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #0E1B2A; /* navy */
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover { background: #152c45; }
+
+/* === Gallery tweaks === */
+.gallery img { transition: opacity 0.2s ease; }
+.gallery a:hover img { opacity: 0.9; }
