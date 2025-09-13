@@ -1,3 +1,28 @@
+/* === Brand Fonts (self-hosted) === */
+/* When they send the fonts, drop them in /assets/fonts and these will kick in. */
+@font-face {
+  font-family: "Artifex Bold";
+  src: url("../fonts/Artifex-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Artica Light";
+  src: url("../fonts/Artica-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply body + heading stacks with graceful fallbacks */
+:root {
+  --font-body: "Artica Light", Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Artifex Bold", Inter, ui-serif, Georgia, "Times New Roman", serif;
+}
+body { font-family: var(--font-body); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+
 /* Smooth scroll for anchor links */
 html { scroll-behavior: smooth; }
 
