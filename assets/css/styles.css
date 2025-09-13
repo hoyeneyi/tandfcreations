@@ -33,3 +33,24 @@ header.stuck { box-shadow: 0 4px 14px rgba(0,0,0,.06); }
 /* === Gallery tweaks === */
 .gallery img { transition: opacity 0.2s ease; }
 .gallery a:hover img { opacity: 0.9; }
+
+/* === Polish === */
+a:hover { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.nav-link { position: relative; }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 2px; background: transparent; transition: background .2s ease;
+}
+.nav-link:hover::after { background: #0245a3; } /* brand */
+
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: .75rem 1.25rem; border-radius: .75rem;
+  background: #0E1B2A; color: #fff; font-weight: 600;
+}
+.btn-primary:hover { background: rgba(14,27,42,.9); }
+
+/* Optional: crisper cards on light bg */
+.card { border-radius: .75rem; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); border: 1px solid rgba(0,0,0,.06); }
