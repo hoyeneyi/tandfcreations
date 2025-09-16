@@ -1,4 +1,17 @@
-/* === Brand Fonts (self-hosted) === */
+/* Local font: Arno Pro Regular */
+@font-face {
+  font-family: "Arno Pro";
+  src: url("../fonts/ArnoPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Use Arno Pro for headings, keep Inter for body */
+h1, h2, h3, h4 {
+  font-family: "Arno Pro", serif;
+  letter-spacing: 0.2px; /* subtle polish */
+}
 /* When they send the fonts, drop them in /assets/fonts and these will kick in. */
 @font-face {
   font-family: "Artifex Bold";
