@@ -38,3 +38,23 @@ if (form) {
     }, 900);
   });
 }
+/* ----- Simple fixed-height carousel (no layout shift) ----- */
+(function(){
+  const track = document.getElementById('carousel-track');
+  if (!track) return;
+
+  const slides = Array.from(track.children);
+  let index = 0;
+  const go = (i) => {
+    index = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  document.getElementById('carousel-prev')?.addEventListener('click', () => go(index - 1));
+  document.getElementById('carousel-next')?.addEventListener('click', () => go(index + 1));
+
+  let timer = setInterval(() => go(index + 1), 4000);
+  // pause on hover (optional)
+  track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
+  track.parentElement.addEventListener('mouseleave', () => { timer = setInterval(() => go(index + 1), 4000); });
+})();

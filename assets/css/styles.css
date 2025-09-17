@@ -1,94 +1,59 @@
-/* Local font: Arno Pro Regular */
-@font-face {
-  font-family: "Arno Pro";
-  src: url("../fonts/ArnoPro-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+/* ---- brand wood background (use only where you want) ---- */
+.brand-surface {
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
 }
 
-/* Use Arno Pro for headings, keep Inter for body */
-h1, h2, h3, h4 {
-  font-family: "Arno Pro", serif;
-  letter-spacing: 0.2px; /* subtle polish */
+/* Logo sizing (smaller than before) */
+.site-logo {
+  height: 2.25rem;        /* ~36px on mobile */
 }
-/* When they send the fonts, drop them in /assets/fonts and these will kick in. */
-@font-face {
-  font-family: "Artifex Bold";
-  src: url("../fonts/Artifex-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Artica Light";
-  src: url("../fonts/Artica-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+@media (min-width: 640px){
+  .site-logo { height: 2.75rem; } /* ~44px on sm+ */
 }
 
-/* Apply body + heading stacks with graceful fallbacks */
-:root {
-  --font-body: "Artica Light", Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-heading: "Artifex Bold", Inter, ui-serif, Georgia, "Times New Roman", serif;
+/* Headings in brand blue */
+h2.text-brand, h3.text-brand { color: #0245a3; }
+
+/* Carousel: fixed height so the page doesn't "jump" */
+.carousel {
+  position: relative;
+  height: 18rem;          /* h-72 */
 }
-body { font-family: var(--font-body); }
-h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
-
-/* Smooth scroll for anchor links */
-html { scroll-behavior: smooth; }
-
-/* Sticky header shadow on scroll */
-header.stuck { box-shadow: 0 4px 14px rgba(0,0,0,.06); }
-
-/* === Base helpers for form inputs & buttons === */
-.input {
-  padding: 0.75rem;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 0.5rem;
-  background: #fff;
-  font-size: 0.95rem;
+@media (min-width: 640px){
+  .carousel { height: 22rem; } /* h-88 */
 }
-
-.input:focus {
-  outline: 2px solid #A36B39; /* wood color */
-  outline-offset: 1px;
+.carousel-track {
+  position: absolute; inset: 0;
+  display: flex; 
+  transition: transform .5s ease;
 }
-
-.btn-primary {
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  background: #0E1B2A; /* navy */
-  color: #fff;
-  font-weight: 600;
-  transition: background 0.2s ease;
-  cursor: pointer;
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
 }
-
-.btn-primary:hover { background: #152c45; }
-
-/* === Gallery tweaks === */
-.gallery img { transition: opacity 0.2s ease; }
-.gallery a:hover img { opacity: 0.9; }
-
-/* === Polish === */
-a:hover { text-decoration-thickness: 2px; text-underline-offset: 3px; }
-.nav-link { position: relative; }
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: -6px;
-  height: 2px; background: transparent; transition: background .2s ease;
+.carousel-slide img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
 }
-.nav-link:hover::after { background: #0245a3; } /* brand */
-
-.btn-primary {
-  display: inline-flex; align-items: center; justify-content: center;
-  padding: .75rem 1.25rem; border-radius: .75rem;
-  background: #0E1B2A; color: #fff; font-weight: 600;
+.carousel-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,.45); color: #fff;
+  border-radius: .5rem; padding: .5rem .6rem; line-height: 1;
 }
-.btn-primary:hover { background: rgba(14,27,42,.9); }
+.carousel-btn:hover { background: rgba(0,0,0,.55); }
+.carousel-btn.prev { left: .5rem; }
+.carousel-btn.next { right: .5rem; }
 
-/* Optional: crisper cards on light bg */
-.card { border-radius: .75rem; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); border: 1px solid rgba(0,0,0,.06); }
+/* Card headings (Custom, Premium, etc.) in blue */
+.feature-card h3 { color: #0245a3; }
+
+/* Keep previous helpers */
+.input{padding:.75rem;border:1px solid rgba(0,0,0,.12);border-radius:.5rem;background:#fff;font-size:.95rem}
+.input:focus{outline:2px solid #A36B39;outline-offset:1px}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:.75rem 1.25rem;border-radius:.75rem;background:#0E1B2A;color:#fff;font-weight:600}
+.btn-primary:hover{background:rgba(14,27,42,.9)}
+.gallery img{transition:opacity .2s ease}
+.gallery a:hover img{opacity:.9}
