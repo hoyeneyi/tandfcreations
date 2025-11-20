@@ -1,0 +1,16 @@
+backend:
+  name: github
+  repo: hoyeneyi/tandfcreations
+  branch: main
+
+media_folder: "assets/images/gallery"
+public_folder: "/assets/images/gallery"
+
+collections:
+  - name: "gallery"
+    label: "Gallery Images"
+    folder: "assets/images/gallery"
+    create: true
+    slug: "{{filename}}"
+    fields:
+      - { label: "Image", name: "image", widget: "image" }
